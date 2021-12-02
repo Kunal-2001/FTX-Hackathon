@@ -117,3 +117,13 @@ module.exports.startup_get_by_id = async (req,res) => {
         res.status(400).json({ err });
     }
 }
+module.exports.startup_review = async (req,res) => {
+    const {startupid , userid , star , review} = req.body
+    try {
+        const comment = await Review.create({userid , star , review})
+        const startup = await Startup.findByIdAndUpdate(startupid, {$push : {stars: comment.star , reviews : comment}})
+        res.status(201).json({comment})
+    } catch (err) {
+        res.status(400).json({ err });
+    }
+}
