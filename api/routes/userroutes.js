@@ -10,6 +10,7 @@ router.post("/login", uController.login_post);
 router.get("/logout", uController.logout_get);
 router.get("/dashboard/:id", uController.user_dashboard);
 router.post("/addstartup", uController.add_startup_post);
+router.get("/startup/:id", uController.startup_get_by_id);
 
 
 module.exports = router;

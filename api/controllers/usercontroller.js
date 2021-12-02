@@ -109,3 +109,11 @@ module.exports.add_startup_post = async (req,res) => {
         res.status(400).json({ err });
     }
 }
+module.exports.startup_get_by_id = async (req,res) => {
+    try {
+        const startupdetail = await Startup.findById(req.params.id)
+        res.status(201).json(startupdetail)
+    } catch (err) {
+        res.status(400).json({ err });
+    }
+}
