@@ -101,3 +101,11 @@ module.exports.user_dashboard = async (req,res) => {
         res.status(400).json({ err });
     }
 }
+module.exports.add_startup_post = async (req,res) => {
+    try {
+        const startupIdea = await Startup.create(req.body)
+        res.status(201).json(startupIdea)
+    } catch (err) {
+        res.status(400).json({ err });
+    }
+}
