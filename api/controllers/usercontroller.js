@@ -127,3 +127,51 @@ module.exports.startup_review = async (req,res) => {
         res.status(400).json({ err });
     }
 }
+module.exports.order = async (req,res) => {
+    const {money} = req.body
+    const options = {
+        amount: money * 100, // amount == Rs 50
+        currency: "INR",
+        receipt: "receipt#1",
+        payment_capture: 0,
+        // 1 for automatic capture // 0 for manual capture
+    };
+    try {
+        instance.orders.create(options, async function (err, order) {
+            if (err) {
+                return res.status(500).json({
+                message: "Something Went Wrong",
+                });
+            }
+            return res.status(200).json(order);
+        });
+    } catch (err) {
+        res.status(400).json({ err });
+    }
+}
+
+module.exports.mail = async (req,res) => {
+    const {email, money, startupID, userID, PaymentID, investMoney, typeOfInvestment} = req.body
+    // 'shawharsh10@gmail.com, harshshaw5@gmail.com'
+    try {
+        let mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: email,
+            subject: 'Thank You for the donation',
+            text: `Thank You for the donation of Rs. ${money}, 
+Please scan the QR code given to redeem the profit share reward on your donation.
+    Note : 
+        1. This QR code will only get active if the company recieves a profit in future from the donations provided.
+        2. You will recieve an email notification when your QR code gets active inorder to recieve reward`,
+            attachments: [{
+                filename: 'qr.png',
+                path: `${__dirname}/qr.png`
+            }]
+        };
+        const investment = await Investment.create({startupID, userID, PaymentID, investMoney, typeOfInvestment})
+        let info = await transporter.sendMail(mailOptions);
+        res.status(200).json({ info, investment })
+    } catch (error) {
+        res.status(400).json({ err });
+    }
+}
