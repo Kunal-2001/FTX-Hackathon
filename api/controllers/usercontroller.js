@@ -89,3 +89,15 @@ module.exports.logout_get = async (req,res) => {
     res.cookie('jwt', '', { maxAge: 1 });
     res.redirect('/');
 }
+module.exports.user_dashboard = async (req,res) => {
+    try {
+        const user = await User.findById(req.params.id)
+        const startup = await Startup.find({userid : req.params.id})
+        const investment = await Investment.find({userID : req.params.id})
+        res.status(201).json({userid : user._id, username : user.name , useremail : user.email , startup,investment})
+    } catch (err) {
+        // console.log(err.message)
+        const errors = handleError(err)
+        res.status(400).json({ err });
+    }
+}

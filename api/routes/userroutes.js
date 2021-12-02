@@ -8,5 +8,7 @@ const router = Router();
 router.post("/signup", uController.signup_post);
 router.post("/login", uController.login_post);
 router.get("/logout", uController.logout_get);
+router.get("/dashboard/:id", uController.user_dashboard);
+
 
 module.exports = router;
