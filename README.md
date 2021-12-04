@@ -25,7 +25,7 @@
 
 
 ## 💻 samples:
-<img src="https://github.com/Kunal-2001/FTX-Hackathon/tree/master/mockups/home-page.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/master/mockups/home-page.jpg">
 <img src="https://github.com/Kunal-2001/FTX-Hackathon/tree/master/mockups/loan-predictor.jpg">
 <img src="https://github.com/Kunal-2001/FTX-Hackathon/tree/master/mockups/investment.jpg"> 
 <img src="https://github.com/Kunal-2001/FTX-Hackathon/tree/master/mockups/payment-succesfful.jpg">
