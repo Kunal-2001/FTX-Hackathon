@@ -1,7 +1,7 @@
 # Internet startups Database
 
 ## 🔗 Links
-<!-- - [Video Explanation](https://vimeo.com/501425359) -->
+- [Video Explanation](https://youtu.be/aqykLPBKeZ4)
 <!-- - [PPT]() -->
 
 
