@@ -25,7 +25,17 @@
 
 
 ## 💻 samples:
-
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/home-page.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/loan-predictor.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/investment.jpg"> 
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/payment-succesfful.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/give-rating.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/create-startup.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/loan-predictor.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/success-predictor.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/profile-1.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/profile-2.jpg">
+<img src="https://github.com/Kunal-2001/FTX-Hackathon/blob/main/mockups/sign-up.jpg">
 
 
 ## 👣 steps to run the project
